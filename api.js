@@ -7,6 +7,7 @@ const price = require("./routers/price");
 const ranks = require("./routers/ranks");
 const award = require("./routers/award");
 const card = require("./routers/card");
+const wallet = require("./routers/wallet");
 const user_card = require("./routers/user_card");
 const path = require("path");
 const PORT = 5000;
@@ -23,5 +24,7 @@ app.use("/ranks", ranks);
 app.use("/award", award);
 app.use("/card", card);
 app.use("/usercard", user_card);
+
+app.use("/wallet", wallet);
 
 app.listen(PORT, () => console.log("API Start!"));

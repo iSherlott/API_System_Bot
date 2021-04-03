@@ -88,7 +88,7 @@ exports.update = async (req, res) => {
 
         for (let key in req.body) {
           let stm = db.prepare(
-            `Update prices SET ${key} = ${req.body[key]} WHERE price_id = (?)`,
+            `UPDATE prices SET ${key} = ${req.body[key]} WHERE price_id = (?)`,
             req.params.id
           );
           stm.run();
